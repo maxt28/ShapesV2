@@ -1,20 +1,23 @@
+package com.maxt28;
+
 import java.util.ArrayList;
+import java.util.List;
 
 abstract class Shape {
 
-    ArrayList<String> parametersXML = new ArrayList<>();
-    ArrayList<String> parametersJSON = new ArrayList<>();
+    public List<String> parametersXML = new ArrayList<>();
+    public List<String> parametersJSON = new ArrayList<>();
 
     private double area;
     private double perimeter;
     private String shapeName;
     private int id;
 
-    ArrayList<String> getParametersXML(){
+    public List<String> getParametersXML(){
         setParametersXML();
         return parametersXML;
     }
-    ArrayList<String> getParametersJSON(){
+    public List<String> getParametersJSON(){
         setParametersJSON();
         return parametersJSON;
     }
@@ -31,15 +34,15 @@ abstract class Shape {
         parametersJSON.add("\"perimeter\": \"" + perimeter + "\"");
     }
 
-    int getId() {
+    public int getId() {
         return id;
     }
 
-    void setId(int id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    void setShapeName(String shapeName) {
+    public void setShapeName(String shapeName) {
         this.shapeName = shapeName;
     }
 
@@ -47,11 +50,11 @@ abstract class Shape {
         return this.shapeName;
     }
 
-    void setArea(double area) {
+    public void setArea(double area) {
         this.area = Math.floor(area * 100) / 100;
     }
 
-    void setPerimeter(double perimeter) {
+    public void setPerimeter(double perimeter) {
         this.perimeter = Math.floor(perimeter * 100) / 100;
     }
 

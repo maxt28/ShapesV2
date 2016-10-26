@@ -1,3 +1,5 @@
+package com.maxt28;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -6,7 +8,7 @@ class Circle extends Shape {
     static final String SHAPE_NAME = "circle";
     private double radius;
 
-    Circle() {
+    public Circle() {
         System.out.println("You are creating circle now.");
         createCircle();
     }
