@@ -1,10 +1,13 @@
+package com.maxt28;
+
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Group {
-    private ArrayList<Shape> shapes = new ArrayList<>();
+    private List<Shape> shapes = new ArrayList<>();
 
-    public Group(ArrayList<Shape> shapes) {
+    public Group(List<Shape> shapes) {
         this.shapes = shapes;
     }
 

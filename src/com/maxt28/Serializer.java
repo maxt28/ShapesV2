@@ -1,5 +1,7 @@
+package com.maxt28;
+
 import java.io.PrintWriter;
-import java.util.ArrayList;
+import java.util.List;
 
 abstract class Serializer {
     private static String elementRoot = "group";
@@ -7,7 +9,7 @@ abstract class Serializer {
     private static String attr2 = "figure";
     private static String element = "shape";
 
-    static void serializeToXML(ArrayList<Shape> shapes) {
+    public static void serializeToXML(List<Shape> shapes) {
         try {
             PrintWriter writer = new PrintWriter("file_xml.xml", "UTF-8");
             writer.println("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
@@ -26,7 +28,7 @@ abstract class Serializer {
         }
     }
 
-    static void serializeToJSON(ArrayList<Shape> shapes) {
+    public static void serializeToJSON(List<Shape> shapes) {
         try {
             PrintWriter writer = new PrintWriter("file_json.json", "UTF-8");
             writer.println("{\"" + elementRoot + "\": {");

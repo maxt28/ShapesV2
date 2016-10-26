@@ -1,3 +1,5 @@
+package com.maxt28;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -8,7 +10,7 @@ class Triangle extends Shape {
     private double side2;
     private double side3;
 
-    Triangle() {
+    public Triangle() {
         System.out.println("You are creating triangle now.");
         createTriangle();
     }
@@ -31,8 +33,6 @@ class Triangle extends Shape {
             createTriangle();
         }
         setShapeName(SHAPE_NAME);
-
-        //S = sqrt(p(p-a)(p-b)(p-c)); p = (a+b+c)/2;
         double p = (side1+side2+side3)/2;
         setArea(Math.sqrt(p*(p-side1)*(p-side2)*(p-side3)));
         setPerimeter(side1 + side2 + side3);

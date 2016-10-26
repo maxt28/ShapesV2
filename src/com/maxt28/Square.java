@@ -1,3 +1,5 @@
+package com.maxt28;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -6,7 +8,7 @@ class Square extends Shape {
     static final String SHAPE_NAME = "square";
     private double side;
 
-    Square() {
+    public Square() {
         createSquare();
     }
 
